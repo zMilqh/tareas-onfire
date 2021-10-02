@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="theme-color" content="#009688" />
+        <meta name="msapplication-navbutton-color" content="#009688" />
+        <link rel="manifest" href="/manifest.json">
+
+        <title>Lista de tareas</title>
+
+        <!-- Compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <label for="txtTitulo">Título</label>
+            <input type="text" id="txtTitulo" name="txtTitulo" />
+
+            <label for="txtDetalles">Detalles</label>
+            <input type="text" id="txtDetalles" name="txtDetalles" />
+
+            <!-- AQUI ESTA EL BOTON -->
+            <a
+                class="waves-effect waves-light btn"
+                id="btnAgregar"
+                onclick="agregarTarea()"
+                >AGREGAR</a
+            >
+
+            <a
+                class="waves-effect waves-light btn"
+                id="btnActualizar"
+                style="display: none"
+                onclick="actualizarTarea()"
+                >ACTUALIZAR</a
+            >
+
+            <a
+                class="waves-effect waves-light btn red"
+                id="btnCancelar"
+                style="display: none"
+                onclick="limpiarBotones()"
+                >CANCELAR</a
+            >
+        </div>
+
+        <div class="container">
+            <ul class="collapsible" id="lista"></ul>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+  apiKey: "AIzaSyDYNR8XjT7hLqHvdHDO57-xbf3bCYUzQFc",
+  authDomain: "lista-de-tareas-b02f6.firebaseapp.com",
+  projectId: "lista-de-tareas-b02f6",
+  storageBucket: "lista-de-tareas-b02f6.appspot.com",
+  messagingSenderId: "479616101425",
+  appId: "1:479616101425:web:1f75d9a87b7e904bb43910",
+  measurementId: "G-ZWBMEFGM4W"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="tareas.js"></script>
+    </body>
+</html>
