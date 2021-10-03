@@ -12,14 +12,14 @@
     "background_color": "#00897b",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3367D6",
+    "theme_color": "#00897b",
     "shortcuts": [
         {
             "name": "Agregar Tarea",
             "short_name": "Agregar",
             "description": "Selecciona esta opción para Agregar una tarea",
-            "url": "/today?source=pwa",
-            "icons": [{ "src": "images/today.png", "sizes": "192x192" }]
+            "url": "index.html",
+            "icons": [{ "src": "images/tareas.png", "sizes": "256x256" }]
         }
     ],
     "description": "Esta es una app hecha con firebase para organizar tareas"
