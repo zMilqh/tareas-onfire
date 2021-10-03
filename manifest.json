@@ -3,7 +3,7 @@
     "name": "Lista de Tareas ",
     "icons": [
         {
-            "src": "/images/tareas.png",
+            "src": "images/tareas.png",
             "type": "image/png",
             "sizes": "256x256"
         }
@@ -19,7 +19,7 @@
             "short_name": "Agregar",
             "description": "Selecciona esta opción para Agregar una tarea",
             "url": "/today?source=pwa",
-            "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+            "icons": [{ "src": "images/today.png", "sizes": "192x192" }]
         }
     ],
     "description": "Esta es una app hecha con firebase para organizar tareas"
